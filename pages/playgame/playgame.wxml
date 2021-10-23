@@ -1,0 +1,65 @@
+<!--pages/playgame.wxml-->
+<image src="/images/backGroundPictures/brownColor.png" class="backGround">
+
+  <image src="/images/plate/kazu.png" class="kazu">
+    
+  </image>
+  <image src="/images/poker/poker_back.png" class="poker_back">
+    <button bindtap="handleTap" size="mini" class="redButton">    
+    </button>
+  </image>
+
+
+  <image src="/images/plate/fangzhiqu.png" class="fangzhiqu">
+  </image>
+  
+  <!-- 触发后显示 -->//点击卡牌区显示的随机图片
+  <image 
+    wx:if="{{fangzhiquFlag}}" 
+    src="/images/poker/{{stdCardId[random]}}.png" 
+    class="poker_back2">
+  </image>
+//玩家A/B收走放置区所有牌
+  <image 
+    wx:if="{{flag}}" 
+    src="/images/plate/fangzhiqu.png" 
+    class="poker_back2">
+  </image>
+
+  <view
+     wx:if="{{order%2==0}}"
+     class="aplay">轮到玩家A放牌</view>>//轮到A玩家
+
+  <view class="word">点击卡牌区放置扑克</view>
+
+  <view
+     wx:if="{{order%2==1}}"
+     class="bplay">轮到玩家B放牌</view>>//轮到B玩家
+
+  <image src="/images/plate/playerA.png" class="playerA">
+  </image>
+
+  <image src="/images/plate/playerB.png" class="playerB">
+  </image>
+  <image 
+    wx:if="{{flag_a2}}"
+    src="/images/poker/poker_back.png" class="poker_backa">
+  </image>
+
+  <image 
+    wx:if="{{flag_b2}}"
+    src="/images/poker/poker_back.png" class="poker_backb">
+  </image>
+
+  <image 
+    wx:if="{{sum==0}}"
+    src="/images/plate/kazu.png" class="kazu">
+  </image>
+
+  <image 
+    wx:if="{{sum==0}}"
+    src="/images/button/ending.png" class="ending">
+    <button bindtap="goPage2" size="mini" class="buttonPos2"></button>
+  </image>
+  
+</image>

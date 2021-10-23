@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/homePage/homePage",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/index/TalkPage",
+    "pages/ending"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black",
+    "pageOrientation": "landscape"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

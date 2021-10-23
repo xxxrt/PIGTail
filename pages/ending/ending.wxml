@@ -1,0 +1,6 @@
+<!--pages/ending.wxml-->
+<image src="/images/backGroundPictures/brownColor.png" class="backGround">
+
+  <view class="word">玩家A获胜！</view>
+
+</image>
