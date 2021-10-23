@@ -1,4 +1,4 @@
-// pages/ending.js
+// pages/ending2.js
 Page({
 
   /**
@@ -6,23 +6,14 @@ Page({
    */
   data: {
 
-    testtrue: true,
   },
 
-  changeContent: function () {
-    var isShow = this.data.testtrue;
-    this.setData({ testtrue: !isShow })
-  },
-  onLoad: function () {
-    var that = this;
-    setInterval(function () {
-      that.changeContent();
-      console.log("轮播请求1秒触发一次");
-    }, 1000)    //代表1秒钟发送一次请求
-  },
   /**
    * 生命周期函数--监听页面加载
    */
+  onLoad: function (options) {
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

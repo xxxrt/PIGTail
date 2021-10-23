@@ -1,7 +1,7 @@
 <!--pages/ending.wxml-->
 <image src="/images/backGroundPictures/brownColor.png" class="backGround">
   <view class="word">
-  <view wx:if="{{testtrue}}">玩家A胜利！</view>
+  <view wx:if="{{testtrue}}">玩家B胜利！</view>
   <view wx:else>游戏结束！</view><!--让文字来回变化-->
 </view>
 

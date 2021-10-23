@@ -17,29 +17,36 @@
   <image 
     wx:if="{{fangzhiquFlag}}" 
     src="/images/poker/{{stdCardId[random]}}.png" 
-    class="poker_back2">
-  </image>
-//玩家A/B收走放置区所有牌
-  <image 
-    wx:if="{{flag}}" 
-    src="/images/plate/fangzhiqu.png" 
-    class="poker_back2">
+    class="poker_back2"> 
   </image>
 
   <view
-     wx:if="{{order%2==0}}"
+    class="ending_a">玩家A手牌数:{{count_a}}</view>
+  <view
+    class="ending_b">玩家B手牌数:{{count_b}}</view>
+  <view
+    class="remain">卡组和放置区卡牌数:{{sum}} {{number}}</view>
+
+  <view
+     wx:if="{{order%2==0&&sum}}"
      class="aplay">轮到玩家A放牌</view>>//轮到A玩家
 
   <view class="word">点击卡牌区放置扑克</view>
 
   <view
-     wx:if="{{order%2==1}}"
+     wx:if="{{order%2==1&&sum}}"
      class="bplay">轮到玩家B放牌</view>>//轮到B玩家
 
   <image src="/images/plate/playerA.png" class="playerA">
   </image>
 
   <image src="/images/plate/playerB.png" class="playerB">
+  </image>
+  //玩家A/B收走放置区所有牌
+  <image 
+    wx:if="{{flag}}" 
+    src="/images/plate/fangzhiqu.png" 
+    class="poker_back2">
   </image>
   <image 
     wx:if="{{flag_a2}}"
@@ -57,9 +64,13 @@
   </image>
 
   <image 
-    wx:if="{{sum==0}}"
+    wx:if="{{sum==0&&count_a<count_b}}"
     src="/images/button/ending.png" class="ending">
     <button bindtap="goPage2" size="mini" class="buttonPos2"></button>
   </image>
-  
+  <image 
+    wx:if="{{sum==0&&count_a>=count_b}}"
+    src="/images/button/ending.png" class="ending">
+    <button bindtap="goPage3" size="mini" class="buttonPos2"></button>
+  </image>
 </image>
