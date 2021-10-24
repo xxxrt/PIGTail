@@ -1,9 +1,7 @@
 
-<image src="/images/backGroundPictures/brownColor.png" class="backGround">
+<image src="/images/backGroundPictures/background.png" class="backGround">
 
-<image src="/images/backGroundPictures/yellow.png" 
-class="yellow">
-</image>
+
 
 <image src="/images/button/start.png" 
 class="button_start">
